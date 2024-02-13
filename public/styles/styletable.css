@@ -1,0 +1,71 @@
+/* using saas */
+
+:root{
+    --periodic-margin:95px;
+    --periodic-padding: 50px
+}
+h1{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+}
+h2{
+    text-align: center;
+    font-family: "Roboto",sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: brown;
+}
+ #background-video{
+    width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.7;
+} 
+.container{
+    display: flex;
+    justify-content: center;
+
+}
+
+table{
+    border: 1px solid red;
+    font-size: 10px;
+    text-align: center;
+    height: 95px;
+    width: 95px;
+    cursor: pointer;
+    
+}
+
+#myTable2, #myTable13, #myTable14, #myTable15, #myTable16, #myTable17{
+    margin-top:    var( --periodic-margin);
+    
+}
+#myTable3, #myTable4, #myTable5, #myTable6, #myTable7, #myTable8, #myTable9, #myTable10, #myTable11, #myTable12{
+    margin-top: calc(var(--periodic-margin) + 190px);
+}
+div#myTable19, div#myTable20{
+
+    display: inline-flex;
+    justify-content: center;
+    padding-top: var(--periodic-padding);
+    float: right;
+    padding-right: 90px;
+}
+div#myTable20{
+    padding-top: calc(var(--periodic-padding) - 50px);
+} 
+/*#myTable19 tr{
+    transform: rotate(90deg);
+}
+/* #myTable19 td{
+    transform: rotate(800deg);
+} */ 

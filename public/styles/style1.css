@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+body{
+min-height: 100vh;
+}
+
+nav{
+    height: 80px;
+    width: 100%;
+}
+h1.logo{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Lucida Grande';
+    line-height: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+nav ul {
+    margin-right: 20px;
+    float: right;
+
+    
+}
+nav ul li {
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+a {
+    color: white;
+    font-family: 'Lucida Sans';
+}
+.btn a{
+    border: 1px solid none;
+    background-color: red;
+    border-radius: 5em;
+    padding: 6px;
+    cursor: pointer;
+}
+.btn a:hover{
+    background-color: #fa8072;
+}

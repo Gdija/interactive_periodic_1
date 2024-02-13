@@ -1,0 +1,51 @@
+/* p {
+    border: 1px solid black;
+} */
+span{
+    color: #FF1E00;
+    font-weight: bold;
+    padding-left: 20px;
+
+}
+li{
+    padding-top: 20px;
+    color: #E8F9FD;
+    font-family: "Roboto",sans-serif;
+    font-size: 30px;
+
+}
+h1{
+    font-family: "Roboto";
+    color: red;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: #E8F9FD 2px 2px;
+}
+h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+#background-video{
+    width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.7;
+}
+div.container{
+    text-align: center;
+}
+ul{
+    display: inline-block;
+    text-align: left;
+}
+
+ul li::marker{
+    color: black;
+}
