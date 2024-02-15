@@ -31,7 +31,7 @@ db.connect( (error) => {
 })
 //app.use(express.static(path.join(__dirname, 'public')));
 //create home page
-app.get("/home", (req, res) => {
+app.get("/", (req, res) => {
     //res.send("<h1>TEST</h1>");
     //res.sendFile(path.join(__dirname, 'public', 'login.html'));
     res.render("index");
@@ -48,6 +48,12 @@ app.get("/indexelement.html", (req, res) => {
     //res.send("<h1>TEST</h1>");
     //res.sendFile(path.join(__dirname, 'public', 'login.html'));
     res.render("indexelement");
+});
+//
+app.get("/signup", (req, res) => {
+    //res.send("<h1>TEST</h1>");
+    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
+    res.render("signup");
 });
 app.listen(5000, () => {
     console.log("server started on port 5000");
