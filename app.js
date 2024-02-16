@@ -18,7 +18,9 @@ const db = mysql.createConnection({
 const publicDirectory = path.join(__dirname, './public');
 app.use(express.static(publicDirectory));
 
-
+app.use(express.urlencoded({extended: false}));
+//parse json bodies (as sent by AOPI clients)
+app.use(express.json());
 
 app.set('view engine', 'hbs');
 
@@ -29,32 +31,11 @@ db.connect( (error) => {
         console.log("MYSQL Connected.....")
     }
 })
-//app.use(express.static(path.join(__dirname, 'public')));
-//create home page
-app.get("/", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
-    res.render("index");
-});
 
-//create periodic table page
-app.get("/periodic%20table", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
-    res.render("periodic table");
-});
-//create element page
-app.get("/indexelement.html", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
-    res.render("indexelement");
-});
-//
-app.get("/signup", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
-    res.render("signup");
-});
-app.listen(5000, () => {
-    console.log("server started on port 5000");
+//define routes
+app.use('/', require('./routes/pages'));
+app.use('/auth', require('./routes/auth'));
+
+app.listen(5001, () => {
+    console.log("server started on port 5001");
 });
