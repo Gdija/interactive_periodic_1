@@ -8,16 +8,16 @@ router.get('/', authController.isLoggedIn, (req, res) => {
     });
 });
 
-router.get("/periodic%20table", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
-    res.render("periodic table");
+router.get("/periodic%20table", authController.isLoggedIn, (req, res) => {
+    res.render('periodic table', {
+        user: req.user
+    });
 });
 
-router.get("/indexelement.html", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
-    res.render("indexelement");
+router.get("/indexelement.html",authController.isLoggedIn, (req, res) => {
+    res.render("indexelement", {
+        user: req.user
+    });
 });
 
 router.get("/signup", (req, res) => {
@@ -39,6 +39,13 @@ router.get("/profile", authController.isLoggedIn, (req, res) => {
     } else {
         res.redirect('/login');
     }
+});
+
+router.get("/quiz", authController.isLoggedIn, (req, res) => {
+    res.render("quiz", {
+        user: req.user
+
+    });
 });
 
 module.exports = router;

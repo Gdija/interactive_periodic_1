@@ -16,9 +16,15 @@
         <h1 class="logo"><a href="/">ElemLearn</a></h1>
         <ul>
             <li><a href="/periodic table">Periodic Table</a></li>
-            <li><a href="#">Quiz</a></li>
-            <li><a href="/login">Login</a></li>
-            <li class="btn"><a href="/signup">SignUp</a></li>
+            {{#if user}}
+                <li><a href="/profile">Profile</a></li>
+                <li><a href="quiz">Quiz</a></li>
+                <li><a href="/auth/logout">Logout</a></li>
+            {{else}}
+                <li><a href="#">Quiz</a></li>
+                <li><a href="/login">Login</a></li>
+                <li class="btn"><a href="/signup">SignUp</a></li>
+            {{/if}}  
         </ul>
     </nav>
 
