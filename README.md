@@ -67,3 +67,7 @@ npm i --save nodemon
 - Access the Quiz section to test your understanding of elements.
 
 ![alt text](img/Screenshot%20quiz2.png)
+
+## Attributions
+all images and videos designed by Freepik 
+www.freepik.com
