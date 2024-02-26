@@ -11,7 +11,7 @@ Welcome to ElemLearn – a project designed exclusively for chemistry students a
 
 Install the xampp web server using this link https://www.apachefriends.org/download.html
 
-#NODE.JS
+#NODE.JS(windows)
 
 install node.js using link https://nodejs.org/en
 we can verify if the installation is succeeded using 
@@ -49,3 +49,13 @@ To restart the server automatically
 ```bash
 npm i --save nodemon
 ```
+## Usage
+- Navigate through the interactive periodic table to discover information about each element.
+![alt text](img.png)
+
+- Click on individual elements to view details such as standard state, density...
+
+
+- Sign up for a free account to unlock quiz section.
+
+- Access the Quiz section to test your understanding of elements.
