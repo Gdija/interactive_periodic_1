@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/off-logo.png" type="image/icon type">
+
         {{!-- <link rel="stylesheet" type="text/css" href="styles/style1.css"> --}}
     <link rel="stylesheet" type="text/css" href="styles/styletable.css">
     <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
@@ -18,10 +20,10 @@
             <li><a href="/periodic table">Periodic Table</a></li>
             {{#if user}}
                 <li><a href="/profile">Profile</a></li>
-                <li><a href="quiz">Quiz</a></li>
+                <li><a href="/quiz">Quiz</a></li>
                 <li><a href="/auth/logout">Logout</a></li>
             {{else}}
-                <li><a href="#">Quiz</a></li>
+                <li><a href="/quiz">Quiz</a></li>
                 <li><a href="/login">Login</a></li>
                 <li class="btn"><a href="/signup">SignUp</a></li>
             {{/if}}  
@@ -33,7 +35,8 @@
    <video autoplay muted loop id="background-video">
     <source src="videos/video.mol.mp4" type="video/mp4">
    </video>
-   
+
+
     <div class="container">
     <div id="myTable1">
     </div>

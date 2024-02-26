@@ -19,8 +19,8 @@ fetch(apiUrl)
         //const cell = data.Table.Row[0].Cell;
         const cell = elementData.Cell;
         const content = `
-        <h1>Element Properties</h1>
-        <h2>${cell[2]}</h2>
+        <h2>Element Properties</h2>
+        <h3>${cell[2]}</h3>
         <ul>
         <li>Standard State: <span>${cell[11]}</span></li>
       <li>Electron Configuration: <span>${cell[5]}</span></li>

@@ -1,6 +1,78 @@
-/* p {
-    border: 1px solid black;
+/* nav bar */
+* {
+    margin: 0;
+    padding: 0;
+    /* text-decoration: none;
+    list-style: none; */
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+nav.nav-bar{
+    list-style: none;
+}
+h1.logo{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Lucida Grande';
+    line-height: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav ul {
+    margin-right: 20px;
+    float: right;
+
+    
+}
+nav ul li {
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 20px; 
+    /* font-size: 20px; */
+    padding-bottom: 30px;
+
+}
+
+nav ul li a{
+    font-size: 25px;
+    /* padding-bottom: 30px; */
+}
+/* ul a{
+    margin-bottom: 30px;
 } */
+a {
+    color: white;
+    font-family: 'Lucida Sans';
+    text-decoration: none;
+
+}
+a:hover{
+    color: yellow;
+}
+.btn a{
+    border: 1px solid none;
+    background-color: red;
+    border-radius: 5em;
+    padding: 6px;
+    cursor: pointer;
+}
+.btn a:hover{
+    background-color: #fa8072;
+}
+
+
+
+
+/* element page */
 span{
     color: #FF1E00;
     font-weight: bold;
@@ -14,17 +86,19 @@ li{
     font-size: 30px;
 
 }
-h1{
+h2{
+    padding-top: 30px;
     font-family: "Roboto";
     color: red;
     text-align: center;
     font-size: 50px;
     text-shadow: #E8F9FD 2px 2px;
 }
-h2{
+h3{
     font-family: "Roboto", sans-serif;
-    font-size: 30px;
+    font-size: 40px;
     text-align: center;
+    padding: 30px 0px;
 }
 #background-video{
     width: 100vw;

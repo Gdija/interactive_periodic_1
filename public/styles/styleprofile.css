@@ -1,0 +1,52 @@
+li a.avatar-ctn{
+    background-color: #FF5656;
+    text-align: center;
+}
+
+.avatar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 125); */
+}
+/* .card{
+    width: 500px;
+    height: 250px;
+    background-color: white;
+} */
+.container.mt-4{
+    background-color: #FF5656;
+    height: 90%;
+    padding-left: 0;
+    padding-right: 0;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+#nav{
+    background-color: black;
+}
+body{
+    background-color: #EDF2F6;
+}
+.card-title{
+    color: white;
+    text-align: center;
+    font-family: "roboto", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+}
+.card-text{
+    color: #fff;
+    text-align: center;
+    font-family: "roboto";
+    font-size: 25px;
+
+}
+a.btn.btn-primary{
+    display: block;
+    margin: 10px auto; /* Center the block-level element */
+    padding: 10px; /* Adjust padding to control button size */
+    font-size: 14px;
+    width: 150px;
+}

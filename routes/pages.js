@@ -21,13 +21,9 @@ router.get("/indexelement.html",authController.isLoggedIn, (req, res) => {
 });
 
 router.get("/signup", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
     res.render("signup");
 });
 router.get("/login", (req, res) => {
-    //res.send("<h1>TEST</h1>");
-    //res.sendFile(path.join(__dirname, 'public', 'login.html'));
     res.render("login");
 });
 router.get("/profile", authController.isLoggedIn, (req, res) => {

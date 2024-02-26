@@ -1,21 +1,95 @@
+
+/* html{
+    width: 100%;
+} */
+/* navbar style */
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+nav{
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    opacity: 0.7;
+}
+h1.logo{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Lucida Grande';
+    line-height: 50px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+nav ul {
+    margin-right: 20px;
+    float: right;
+
+    
+}
+nav ul li {
+    color: white;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 40px;
+    /* font-size: 20px; */
+}
+nav ul li a{
+    font-size: 25px;
+}
+a {
+    color: white;
+    font-family: 'Lucida Sans';
+    /* font-size: 20px; */
+
+}
+a:hover{
+    color: yellow;
+}
+.btn a{
+    border: 1px solid none;
+    background-color: red;
+    border-radius: 5em;
+    padding: 6px;
+    cursor: pointer;
+}
+.btn a:hover{
+    background-color: #fa8072;
+}
+
+
+
+
+
+
+/* Table style */
 /* using saas */
 
 :root{
     --periodic-margin:95px;
     --periodic-padding: 50px
 }
-h1{
+h2{
+    margin-top: 20px;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-weight: 900;
     font-size: 60px;
+    color: #fff;
 }
-h2{
+h3{
+    margin-top: 20px;
     text-align: center;
     font-family: "Roboto",sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 30px;
-    color: brown;
+    color: #6A7EFC;
 }
  #background-video{
     width: 100vw;
@@ -30,10 +104,15 @@ h2{
   opacity: 0.7;
 } 
 .container{
+    /* height: auto;
+    width: auto; */
     display: flex;
     justify-content: center;
-
+    /* overflow-x: auto; */
 }
+/* .inner-div{
+    overflow-y: auto;
+} */
 
 table{
     border: 1px solid red;
@@ -42,6 +121,9 @@ table{
     height: 95px;
     width: 95px;
     cursor: pointer;
+    /* display: grid; */
+    /* justify-content: center; */
+
     
 }
 
@@ -69,3 +151,19 @@ div#myTable20{
 /* #myTable19 td{
     transform: rotate(800deg);
 } */ 
+/* @media(max-width: 1024px) {
+
+    .container{
+        width: 40%;
+        height: 40%;
+        background-color: yellow;
+    }
+    table{
+
+    }
+    div#myTable19, div#myTable20{
+        background-color: yellow;
+
+    }
+    
+} */

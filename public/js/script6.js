@@ -1,161 +1,3 @@
-// const apiUrl = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON';
-
-// // Specify the atomic numbers you want to display
-// const specifiedAtomicNumbers = [1, 5, 56, 87, 9];
-
-// fetch(apiUrl)
-//   .then(response => {
-//     if (!response.ok) {
-//       throw new Error(`HTTP error! Status: ${response.status}`);
-//     }
-//     return response.json();
-//   })
-//   .then(data => {
-//     const verticalTable = document.getElementById('verticalTable');
-
-//     if (data.Table && data.Table.Row && Array.isArray(data.Table.Row)) {
-//       // Filter elements based on the specified atomic numbers
-//       const filteredElements = data.Table.Row.filter(row => {
-//         const atomicNumber = parseInt(row.Cell[0]);
-//         return specifiedAtomicNumbers.includes(atomicNumber);
-//       });
-
-//       // Loop through the filtered elements
-//       filteredElements.forEach(row => {
-//         const cell = row.Cell;
-
-//         // Create a div for each element
-//         const elementDiv = document.createElement('div');
-
-//         // Loop through properties (atomic number, symbol, name, mass)
-//         for (let i = 0; i < cell.length; i++) {
-//           // Create a span for each property
-//           const propertySpan = document.createElement('span');
-//           propertySpan.classList.add('elementProperty');
-//           propertySpan.textContent = getPropertyLabel(i);
-
-//           // Create a span for each value
-//           const valueSpan = document.createElement('span');
-//           valueSpan.classList.add('elementValue');
-//           valueSpan.textContent = cell[i];
-
-//           // Append property and value spans to the element div
-//           elementDiv.appendChild(propertySpan);
-//           elementDiv.appendChild(valueSpan);
-//         }
-
-//         // Add a separator between elements
-//         const separator = document.createElement('hr');
-//         elementDiv.appendChild(separator);
-
-//         // Append the element div to the vertical table
-//         verticalTable.appendChild(elementDiv);
-//       });
-//     } else {
-//       alert('Invalid data structure from the API.');
-//     }
-//   })
-//   .catch(error => {
-//     console.error('Fetch error:', error);
-//   });
-
-// // Helper function to get property label based on index
-// function getPropertyLabel(index) {
-//   switch (index) {
-//     case 0:
-//       return 'Atomic Number: ';
-//     case 1:
-//       return 'Symbol: ';
-//     case 2:
-//       return 'Name: ';
-//     case 3:
-//       return 'Mass: ';
-//     default:
-//       return '';
-//   }
-// }
-
-
-// Function to create table rows for specified atomic numbers
-// function createTableRows(elements, elementsList) {
-//     elements.forEach(row => {
-//       const cell = row.Cell;
-//       const roundedMass = parseFloat(cell[3]).toFixed(3);
-  
-//       const table = document.createElement('table');
-//       const trAtomicNumber = document.createElement('tr');
-//       const trSymbol = document.createElement('tr');
-//       const trName = document.createElement('tr');
-//       const trMass = document.createElement('tr');
-  
-//       const tdAtomicNumber = document.createElement('td');
-  
-//       tdAtomicNumber.innerHTML = cell[0];
-//       tdAtomicNumber.style.textAlign = "start"; 
-  
-//       const tdSymbol = document.createElement('td');
-//       const tdName = document.createElement('td');
-//       const tdMass = document.createElement('td');
-  
-//       tdSymbol.innerHTML = cell[1];
-//       tdName.innerHTML = cell[2];
-//       tdMass.innerHTML = roundedMass;
-  
-//       trAtomicNumber.appendChild(tdAtomicNumber);
-//       trSymbol.appendChild(tdSymbol);
-//       trName.appendChild(tdName);
-//       trMass.appendChild(tdMass);
-  
-//       table.appendChild(trAtomicNumber);
-//       table.appendChild(trSymbol);
-//       table.appendChild(trName);
-//       table.appendChild(trMass);
-  
-//       elementsList.appendChild(table);
-//     });
-//   }
-  
-//   // API
-//   const apiUrl = 'https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON';
-  
-//   // First part of the periodic table (Hydrogen to Francium)
-//   const specifiedAtomicNumbers1 = [1, 3, 11, 19, 37, 55, 87];
-  
-//   fetch(apiUrl)
-//     .then(response => {
-//       if (!response.ok) {
-//         throw new Error(`HTTP error! Status: ${response.status}`);
-//       }
-//       return response.json();
-//     })
-//     .then(data => {
-//       const elementsList = document.getElementById('myTable');
-  
-//       // Check if data.Table.Row is defined and it is an array
-//       if (data.Table && data.Table.Row && Array.isArray(data.Table.Row)) {
-//         const filteredElements1 = data.Table.Row.filter(row => {
-//           const atomicNumber = parseInt(row.Cell[0]);
-//           return specifiedAtomicNumbers1.includes(atomicNumber);
-//         });
-  
-//         createTableRows(filteredElements1, elementsList);
-  
-//         // Second part of the periodic table (Beryllium to Radium)
-//         const specifiedAtomicNumbers2 = [4, 12, 20, 38, 56, 88]; // Add the remaining atomic numbers
-  
-//         const filteredElements2 = data.Table.Row.filter(row => {
-//           const atomicNumber = parseInt(row.Cell[0]);
-//           return specifiedAtomicNumbers2.includes(atomicNumber);
-//         });
-  
-//         createTableRows(filteredElements2, elementsList);
-//       } else {
-//         alert('Invalid data structure from the API.');
-//       }
-//     })
-//     .catch(error => {
-//       console.error('Fetch error:', error);
-//     });
   
 //function to display element page
 function openElementProperties(atomicNumber, blockId) {
@@ -179,14 +21,14 @@ function createTableRows(elements, elementsList) {
     const tdAtomicNumber = document.createElement('td');
     tdAtomicNumber.innerHTML = cell[0];
     tdAtomicNumber.style.textAlign = "start";
-    tdAtomicNumber.style.fontWeight = "bold"
-    // //add onclick event
-    // tdAtomicNumber.onclick = () => openElementProperties(cell[0]);
+    tdAtomicNumber.style.fontWeight = "bold";
+    // tdAtomicNumber.style.paddingRight= "80px";
 
     const tdSymbol = document.createElement('td');
     tdSymbol.innerHTML = cell[1];
     tdSymbol.style.fontFamily = "Protest Strike";
     tdSymbol.style.fontSize = "30px";
+    // tdSymbol.style.justifyContent= "center";
 
 
     const tdName = document.createElement('td');
