@@ -71,3 +71,7 @@ npm i --save nodemon
 ## Attributions
 all images and videos designed by Freepik 
 www.freepik.com
+
+## Authors
+
+- Khadija ghadi [@Gdija](https://github.com/Gdija)
