@@ -51,11 +51,19 @@ npm i --save nodemon
 ```
 ## Usage
 - Navigate through the interactive periodic table to discover information about each element.
+
 ![alt text](img/Screenshot%20table.png)
 
 - Click on individual elements to view details such as standard state, density...
 
+![alt text](img/Screenshot%20element.png)
+
 
 - Sign up for a free account to unlock quiz section.
 
+![alt text](img/Screenshot%20quiz1.png)
+
+
 - Access the Quiz section to test your understanding of elements.
+
+![alt text](img/Screenshot%20quiz2.png)
